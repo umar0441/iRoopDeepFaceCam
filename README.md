@@ -245,8 +245,6 @@ Users of this software are expected to use this software responsibly while abidi
 
 ## How do I install it?
 
-### I strongly recommend you check out [Deep-Live-Cam](https://github.com/hacksider/Deep-Live-Cam) as iRoopDeepFaceCam was based on thier original work. Checkout their [issues](https://github.com/hacksider/Deep-Live-Cam/issues) page as they will more then likely have the solution for you 
-
 ### Basic: iRoopDeepFaceCam works fast on GPU. It is more likely to work on your computer fast on Nvidia GPU but it will also work on CPU but be very slow. You can follow instructions for the basic install (This usually runs via **CPU**). Go with an Nvidia GPU as it gives you the best results.
 
 #### 1.Setup your platform
