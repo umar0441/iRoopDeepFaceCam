@@ -3,7 +3,7 @@
 # iRoopDeepFaceCam 
 ![iRoopDeepFaceCam-jpg](iRoopDeepFaceCam.jpg)
 
-Get ready to dive into a whole new world of fun with iRoopDeepFaceCam! This innovative tool, inspired by the original [roop](https://github.com/s0md3v/roop) and [Deep-Live-Cam](https://github.com/hacksider/Deep-Live-Cam), lets you create deep fakes using a live webcam, video, or image file. Want to make it even more exciting? Use an OBS virtual camera to act as your webcam! 
+Get ready to dive into a whole new world of fun with iRoopDeepFaceCam! This innovative tool, inspired by the original [roop](https://github.com/s0md3v/roop) and [havok2-htwo](https://github.com/havok2-htwo), lets you create deep fakes using a live webcam, video, or image file. Want to make it even more exciting? Use an OBS virtual camera to act as your webcam! 
 
 iRoopDeepFaceCam features are groundbreaking that [Deep-Live-Cam](https://github.com/hacksider/Deep-Live-Cam) is now adding them to thier code such as our amazing Mouth Mask feature and more. iRoopDeepFaceCam has changed the world of face swap forever that no other app could do.
 
@@ -627,7 +627,6 @@ sudo apt-get -y install cuda-toolkit-11-8
 
 ## Credits
 
-- [Deep-Live-Cam](https://github.com/hacksider/Deep-Live-Cam): Original Deep-Live-Cam
 - [ffmpeg](https://ffmpeg.org/): for making video related operations easy
 - [deepinsight](https://github.com/deepinsight): for their [insightface](https://github.com/deepinsight/insightface) project which provided a well-made library and models.
 - [havok2-htwo](https://github.com/havok2-htwo) : for sharing the code for webcam
