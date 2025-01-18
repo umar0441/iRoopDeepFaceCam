@@ -82,6 +82,22 @@ The core idea is to use AI to analyze faces and their positions within a frame (
 
 **You don't have to always use face tracking.** If your webcam or video displays people who will not change their positions, then using face tracking is unnecessary. You should use face tracking only if people will be moving around and changing positions.
 
+# How Face Index Option on Live Cam Preview Window Works:
+
+![face_index-jpg](images/faceindex.jpg)
+
+The Face Index dropdown allows you to select a specific face for single-face swapping. It is designed exclusively for single-face swapping and will override both the "Use Fist Two Source Faces" and "Use All Source Faces (10 Max)" options. When you choose a source image containing up to ten faces, this dropdown will automatically populate, enabling you to select the desired face for single face swapping. A value of -1 indicates the use of the automatic face selection system for "Use Fist Two Source Faces" and "Use All Source Faces (10 Max)" modes. When Ever you turn on these two options the Face Index is always set back to -1.
+
+When you enable "Use All Source Faces (10 Max)", the Face Index is automatically reset to -1. You can then adjust the Face Index to a specific value, and the selected face will be used to swap all detected faces in the target frame with the chosen face.
+
+This option is particularly useful for handling scenarios where faces may appear in reflections, mirrors, or photos in the background. Using this feature ensures that the intended face is consistently swapped, avoiding errors caused by the AI detecting false positives. For example, the AI might mistakenly identify a tiny cluster of pixels as a face, which could result in swapping an unintended area instead of the desired face.
+
+By setting the Face Index to the specific face you want and enabling "Use All Source Faces (10 Max)", you ensure that all detected faces in the frame are swapped with your selected face. This is especially helpful if you notice glitches or inconsistencies in certain frames, as they often occur when the AI detects unintended faces in the scene.
+
+When you enable 'Auto Face Track', the Face Index is automatically set to -1. You can adjust the Face Index afterward to specify the face you want to track.
+
+
+
 # How Face Tracking Works Step-by-Step:
 
 1.  **Initial Face Detection and Embedding:**
