@@ -3,13 +3,13 @@
 # iRoopDeepFaceCam 
 ![iRoopDeepFaceCam-jpg](iRoopDeepFaceCam.jpg)
 
-Get ready to dive into a whole new world of fun with iRoopDeepFaceCam! This innovative tool, inspired by the original [roop](https://github.com/s0md3v/roop) lets you create deep fakes using a live webcam, video, or image file. Want to make it even more exciting? Use an OBS virtual camera to act as your webcam! 
+Get ready to dive into a whole new world of fun with iRoopDeepFaceCam! This innovative tool, inspired by the original [roop](https://github.com/s0md3v/roop) lets you create face swaps using a live webcam, video, or image file. Want to make it even more exciting? Use an OBS virtual camera to act as your webcam! 
 
 iRoopDeepFaceCam features are groundbreaking that [Deep-Live-Cam](https://github.com/hacksider/Deep-Live-Cam) is now adding them to thier code such as our amazing Mouth Mask feature and more. iRoopDeepFaceCam has changed the world of face swap forever that no other app could do.
 
-What sets iRoopDeepFaceCam apart is its ability to work with one or ten source faces and target one or 10 faces in real-time or in any video or image. Plus, the unique 'Mouth Mask' feature seamlessly blends the original mouth with the source face, allowing you to interact with objects and make your deep fakes look incredibly realistic.
+What sets iRoopDeepFaceCam apart is its ability to work with one or ten source faces and target one or 10 faces in real-time or in any video or image. Plus, the unique 'Mouth Mask' feature seamlessly blends the original mouth with the source face, allowing you to interact with objects and make your face swaps look incredibly realistic.
 
-But that's not all! iRoopDeepFaceCam also offers face tracking for two faces, perfect for keeping the magic alive when two people are on screen or when the scene changes. You can deep fake two people simultaneously, watch videos, or live stream with this fantastic feature. With all these powerful tools, iRoopDeepFaceCam opens up endless possibilities for creativity and fun. Dive in and start creating your own deep fake adventures today!
+But that's not all! iRoopDeepFaceCam also offers face tracking for two faces, perfect for keeping the magic alive when two people are on screen or when the scene changes. You can face swap two people simultaneously, watch videos, or live stream with this fantastic feature. With all these powerful tools, iRoopDeepFaceCam opens up endless possibilities for creativity and fun. Dive in and start creating your own face swap adventures today!
 
 ### Click Image to Watch Quick Video Demo [iRoopDeepFaceCam](https://youtu.be/bhFx6fZab1E)
 [![iRoopDeepFaceCam](https://i.ytimg.com/vi/bhFx6fZab1E/maxresdefault.jpg)](https://youtu.be/bhFx6fZab1E)
@@ -20,19 +20,19 @@ But that's not all! iRoopDeepFaceCam also offers face tracking for two faces, pe
 
 To kick off the Live webcam feature in iRoopDeepFaceCam, just hit the 'Live' button. It takes about 30 seconds for the preview window to pop up. You can adjust the resolution of the live webcam to suit your needs, but keep in mind that higher resolutions may slow down the face swap process. Feel free to switch resolutions based on your computer's power and performance.
 
-No worries about the preview window size—you can resize it independently of the webcam resolution. Want to go full screen? You can make the preview window as large as you like without affecting the deep fake rendering. The rendering will stay smooth, no matter the size of your preview window. Enjoy seamless deep fake fun with complete control over your setup!  
+No worries about the preview window size—you can resize it independently of the webcam resolution. Want to go full screen? You can make the preview window as large as you like without affecting the face swap rendering. The rendering will stay smooth, no matter the size of your preview window. Enjoy seamless face swap fun with complete control over your setup!  
 
 ## One to Ten faces replaced on webcam
 
-(watch this video to see how Two faces deep fake work)
+(watch this video to see how Two faces can be swapped)
 
 ![DemoTwoFace-gif](images/DemoTwoFace.gif)
 
-Watch as a live webcam feed transforms into an incredible deep fake before your eyes! You’ll see the magic happen in real-time, with the deep fake capturing every detail — even light reflections on the face move naturally, making the transformation look unbelievably lifelike. It's not just a deep fake; it's like watching reality blend seamlessly with creativity!
+Watch as a live webcam feed transforms into an incredible face swap before your eyes! You’ll see the magic happen in real-time, with the face swap capturing every detail — even light reflections on the face move naturally, making the transformation look unbelievably lifelike. It's not just a face swap; it's like watching reality blend seamlessly with creativity!
 
-Why settle for deep faking just one face when you can 10x the fun? With iRoopDeepFaceCam, you can use a source file with One to Ten faces to deep fake One to Ten people live on a webcam feed, video, or image. Imagine the endless possibilities for creating hilarious and entertaining YouTube videos—you and your partners can transform into anyone you want!
+Why settle for face swapping just one face when you can 10x the fun? With iRoopDeepFaceCam, you can use a source file with One to Ten faces to face swap One to Ten people live on a webcam feed, video, or image. Imagine the endless possibilities for creating hilarious and entertaining YouTube videos—you and your partners can transform into anyone you want!
 
-Take it up a notch by using OBS virtual webcam on livestreams, and watch as you create live deep fakes in real-time. There's no extra processing needed, so you can instantly make yourself appear in streams! With iRoopDeepFaceCam, the power to create amazing, fun, and engaging content is right at your fingertips. The only limit is your imagination!
+Take it up a notch by using OBS virtual webcam on livestreams, and watch as you create live face swaps in real-time. There's no extra processing needed, so you can instantly make yourself appear in streams! With iRoopDeepFaceCam, the power to create amazing, fun, and engaging content is right at your fingertips. The only limit is your imagination!
 
 ## Supports processing of an image or video file with One to Ten faces plus mouth mask and face tracking on videos
 
@@ -40,7 +40,7 @@ Take it up a notch by using OBS virtual webcam on livestreams, and watch as you 
 
 With iRoopDeepFaceCam, you can process an image or video file with One to Ten faces, using advanced features like mouth mask feature for an ultra-realistic effect. Here’s how easy it is to get started: simply choose a source image with the desired faces, select a target image or video where you want to replace the faces, and hit Start.
 
-Then, just open your file explorer and navigate to the directory where you want your output to be saved. You'll see a folder named after your video title, where you can watch the frames being swapped in real-time! Once the processing is complete, your final output file will be ready to go. It's that simple—no complicated steps, just straightforward deep fake magic!
+Then, just open your file explorer and navigate to the directory where you want your output to be saved. You'll see a folder named after your video title, where you can watch the frames being swapped in real-time! Once the processing is complete, your final output file will be ready to go. It's that simple—no complicated steps, just straightforward face swap magic!
 
 ## Mouth Mask mode allows you to interact with objects live via webcam, video or image
 
@@ -52,9 +52,9 @@ You can also enable Mouth Mask to process a video file or an image
 
 ![MouthMask-jpg](images/MouthMask.jpg)
 
-With Mouth Mask mode in iRoopDeepFaceCam, you can interact with objects live via a webcam, video, or image, creating a seamless blend with the face swap. Imagine your face being deep-faked while eating, drinking, or talking—this groundbreaking technique lets you fully enjoy the magic of interactive deep fakes!
+With Mouth Mask mode in iRoopDeepFaceCam, you can interact with objects live via a webcam, video, or image, creating a seamless blend with the face swap. Imagine your face being face swapped while eating, drinking, or talking — this groundbreaking technique lets you fully enjoy the magic of interactive face swaps!
 
-What’s truly incredible about this feature is its ability to work in real-time with your webcam, giving you complete control over the Mouth Mask to place it exactly where you want it. Whether you're creating fun content or experimenting with new ideas, this real-time capability makes it super easy and entertaining to explore. Plus, when you pair it with OBS virtual camera, it takes the fun to a whole new level, allowing you to bring your deep fakes to life in live streams like never before. Dive in and experience the thrill!
+What’s truly incredible about this feature is its ability to work in real-time with your webcam, giving you complete control over the Mouth Mask to place it exactly where you want it. Whether you're creating fun content or experimenting with new ideas, this real-time capability makes it super easy and entertaining to explore. Plus, when you pair it with OBS virtual camera, it takes the fun to a whole new level, allowing you to bring your face swaps to life in live streams like never before. Dive in and experience the thrill!
 
 ![MouthMaskDemo.jpg](images/MouthMaskDemo.jpg)
 
@@ -66,9 +66,9 @@ What’s truly incredible about this feature is its ability to work in real-time
 
 ![FaceTracking-gif](images/FaceTracking.gif)
 
-Auto One to Ten Face Tracking in iRoopDeepFaceCam takes your deep fake experience to the next level! With this feature, you can track up to one to ten people in a frame on either a webcam or video file. The software automatically detects target faces from the left side of the frame and assigns up to ten source faces to ten target faces. This feature shines when all the people are in the frame, allowing you to deep fake and track One to Ten faces with ease.
+Auto One to Ten Face Tracking in iRoopDeepFaceCam takes your face swap experience to the next level! With this feature, you can track up to one to ten people in a frame on either a webcam or video file. The software automatically detects target faces from the left side of the frame and assigns up to ten source faces to ten target faces. This feature shines when all the people are in the frame, allowing you to face swap and track One to Ten faces with ease.
 
-Need to switch things up? You can reset face tracking at any time, with two face tracking you can switch sides, flip faces, or even detect faces from the right side of the screen. This works best with two faces. All these breakthrough features, combined with Mouth Mask mode, are incredibly powerful. It seamlessly tracks one to ten people, even when the camera angle changes or the scene shifts, letting them interact naturally and even switch sides in the room. With iRoopDeepFaceCam's face tracking, you'll always know where the person is, making for a smooth and dynamic deep fake experience!
+Need to switch things up? You can reset face tracking at any time, with two face tracking you can switch sides, flip faces, or even detect faces from the right side of the screen. This works best with two faces. All these breakthrough features, combined with Mouth Mask mode, are incredibly powerful. It seamlessly tracks one to ten people, even when the camera angle changes or the scene shifts, letting them interact naturally and even switch sides in the room. With iRoopDeepFaceCam's face tracking, you'll always know where the person is, making for a smooth and dynamic face swap experience!
 
 ## How Auto Face Tracking Works in iRoopDeepFaceCam
 
@@ -92,10 +92,9 @@ When you enable "Use All Source Faces (10 Max)", the Face Index is automatically
 
 This option is particularly useful for handling scenarios where faces may appear in reflections, mirrors, or photos in the background. Using this feature ensures that the intended face is consistently swapped, avoiding errors caused by the AI detecting false positives. For example, the AI might mistakenly identify a tiny cluster of pixels as a face, which could result in swapping an unintended area instead of the desired face.
 
-By setting the Face Index to the specific face you want and enabling "Use All Source Faces (10 Max)", you ensure that all detected faces in the frame are swapped with your selected face. This is especially helpful if you notice glitches or inconsistencies in certain frames, as they often occur when the AI detects unintended faces in the scene.
+By enabling "Use All Source Faces (10 Max)" first and then setting the Face Index to the specific face you want, you ensure that all detected faces in the frame are swapped with your selected face. This is especially helpful if you notice glitches or inconsistencies in certain frames, as they often occur when the AI detects unintended faces in the scene.
 
-When you enable 'Auto Face Track', the Face Index is automatically set to -1. You can adjust the Face Index afterward to specify the face you want to track.
-
+When you enable 'Auto Face Track', the Face Index is automatically set to -1. You can adjust the Face Index afterward to specify the face you want to track. We are again talking about single face tracking here cause the Face Index options is meant to be used for one specific face that will be swapped for Live Cam Mode.
 
 
 # How Face Tracking Works Step-by-Step:
@@ -104,31 +103,31 @@ When you enable 'Auto Face Track', the Face Index is automatically set to -1. Yo
 
     *   When you initiate face tracking (either by starting the feature or by clicking the 'Reset Face Tracking' button), iRoopDeepFaceCam's A.I. analyzes the faces it sees at that moment. This initial detection is crucial because it forms the basis for all subsequent tracking.
     *   The A.I. doesn't just see faces; it generates a unique *embedding* for each face. Think of an embedding as a unique digital fingerprint that captures the facial features' essential characteristics (shape, structure, textures). This embedding is a numerical representation of what the face looks like.
-    *   The faces detected at the start are ordered from left to right that are found for each frame, and mapped to tracked locations, e.g., Face 1, Face 2, Face 3 and so on are tracked separately. These locations are the same positions that source faces are matched to when face swapping. You source images in this example would have Face 1, Face, Face 3 also. Its a one to one match.
+    *   The faces detected at the start are ordered from left to right that are found for each frame, and mapped to tracked locations, e.g., Face 1, Face 2, Face 3 and so on are tracked separately. These locations are the same positions that source faces are matched to when face swapping. You source images in this example would have Face 1, Face 2, Face 3 also. Its a one to one match.
 
     *   **Important Considerations:**
         *   All faces you want to track *must* be clearly visible and unobstructed when you start face tracking. This is how the system initially memorizes their unique features.
         *   If the face has hair in front of it and is moving around where the face keeps hiding the the face detection score will be low, you will see flickering. You can Reset Face Tracking to try to capture a good face for a few frames. But these types of constant face hiding is not ideal.
         *   If a person walks into the frame later, they won't be automatically tracked unless you reset the tracking. 
         *   For webcam use, make sure all desired participants are within view of the camera before activating tracking.
-        *  For video files, the tracking works best if the participants are visible at the beginning of the video.
+        *   For video files, the tracking works best if the participants are visible at the beginning of the video.
         *   In the middle of swapping a video, clicking the 'Reset Face Tracking' button will not reset the face tracking. You would have to do this before you click the 'Start' button.
 
 2.  **Tracking the Faces:**
-    * The face tracking system then uses the embeddings and positions to track faces in real time or in the video once it has had a chance to see the faces at the start.
+    *   The face tracking system then uses the embeddings and positions to track faces in real time or in the video once it has had a chance to see the faces at the start.
     *   The system continuously compares the embedding and position of new detected faces with the embeddings of those it's already tracking.
-    * It uses a combination of techniques like a weighted average for the position and embedding to make the tracking smooth and prevent flickering and still be accurate when the faces switch position.
-   * The system also boosts the score of the faces that have the same ID to prevent it from swapping to a different face unless the match score is very low.
+    *   It uses a combination of techniques like a weighted average for the position and embedding to make the tracking smooth and prevent flickering and still be accurate when the faces switch position.
+    *   The system also boosts the score of the faces that have the same ID to prevent it from swapping to a different face unless the match score is very low.
 
 ### How Face Tracking Works (1 to 10 Faces)
 
 iRoopDeepFaceCam offers flexible face tracking options:
 
 *   **Single Face Tracking:**
-    * When a single face is detected in the source image, iRoopDeepFaceCam is set up to track the leftmost face seen in target video or webcam, even if other faces are present in the scene. The first left face found in target will be used.
+    *   When a single face is detected in the source image, iRoopDeepFaceCam is set up to track the leftmost face seen in target video or webcam, even if other faces are present in the scene. The first left face found in target will be used.
     *   This single face tracking mode does not require more than one source face. It does not matter how many faces are in source image, by default only the first face found from left in source image is used.
-    * The system will follow the targett face around, even if it changes positions with other faces in the frame. This is only possible with face tracking.
-    *  To use this you do not need to click any other buttons just click 'Auto Face Track' switch.
+    *   The system will follow the target face around, even if it changes positions with other faces in the frame. This is only possible with face tracking.
+    *   To use this you do not need to click any other buttons just click 'Auto Face Track' switch.
 
 *   **Two Face Tracking:**
     *   With a source image containing two faces, iRoopDeepFaceCam tracks the two leftmost faces in target frame.
@@ -147,7 +146,7 @@ iRoopDeepFaceCam offers flexible face tracking options:
 ### What happens if the faces are blocked or covered
 
 *   If the tracked faces get blocked for too long, the system may loose track of them. If this happens you should reset the face tracking. 
-* To stop the system from "flickering" when there is a small obstruction in front of the face like hair when starting to track. The system does not always perform a face swap if the score is too low. If a tracked face is missing for too long the system will generate a fake face at the last known location when pesudo is on and perform a face swap with that fake face.
+*   To stop the system from "flickering" when there is a small obstruction in front of the face like hair when starting to track. The system does not always perform a face swap if the score is too low. If a tracked face is missing for too long the system will generate a fake face at the last known location when pesudo is on and perform a face swap with that fake face.
 
 ### Resetting Face Tracking
 
@@ -166,7 +165,7 @@ iRoopDeepFaceCam offers flexible face tracking options:
 
 The quality of face tracking is heavily reliant on the clarity and consistency of the initial face information. When a face is occluded or missing, the system can become confused, making it difficult to maintain accurate tracking. By following these simple guidelines, you'll maximize the effectiveness of the auto face tracking system.
 
-If your subjects are going to be moving too much on screen where the heads are turning and too close to each other then the face tracking is going to work very good. This is due to how faces are tracked based on position on a vertical line. If two faces are switching faces places on the veritcal line too many time due to being to close then the face tracking will get confused.
+If your subjects are going to be moving too much on screen where the heads are turning and too close to each other then the face tracking is not going to work very good. This is due to how faces are tracked based on position on a vertical line. If two faces are switching faces places on the veritcal line too many time due to being to close then the face tracking will get confused.
 
 ### You don't have to always use face tracking
 
@@ -206,7 +205,7 @@ Finding the right balance of people on screen and tracking conditions may requir
 
 ![facerotation-jpg](images/facerotation.jpg)
 
-When swapping a face using the InsightFace AI in videos, images, or webcam feeds, the AI effectively handles face orientations within a specific range of angles: (-90°), (0°), and (+90°). If the face rotates beyond these angles, the AI may struggle to detect and process it accurately.
+When swapping a face using the InsightFace A.I. in videos, images, or webcam feeds, the A.I. effectively handles face orientations within a specific range of angles: (-90°), (0°), and (+90°). If the face rotates beyond these angles, the A.I. may struggle to detect and process it accurately.
 
 To manage extreme face orientations, you can utilize the rotation feature. For instance, if your subject is lying in bed with their face positioned horizontally, adjust the rotation range to either +90° or -90°, depending on the face's direction in the video. This ensures the face swap is applied correctly, even for unconventional orientations.
 
@@ -237,7 +236,7 @@ And that's it! You're all set to start your deep fake adventure. Enjoy the show!
 
 Just use your favorite screencapture to stream like OBS
 > Note: In case you want to change your face, just select another picture, the preview mode will then restart (so just wait a bit).
->
+> If you have more then one face in the source image from left to right, then you can use the Face Index dropdown on the Live Cam Preview window to switch source faces in realtime. This is for single face only.
 
 ## One/Two face controls for webcam mode, video or image
 You can control how a face/s is replaced on target face\s
@@ -250,7 +249,7 @@ You can control how a face/s is replaced on target face\s
 
 3. **Detect Target Faces From Right**: Use this feature when you have one target face and the "Show both faces" option is off. By default, faces are detected from the left side of the webcam, video, or image. If you have background elements like a picture frame to the left of the person, this option helps by detecting and replacing "Face 2" first, then "Face 1". This allows you to control which detected face gets replaced first.
 
-These features give you flexible control over your deep fake creations, ensuring you get the results you want!
+These features give you flexible control over your face swap creations, ensuring you get the results you want!
 
 ## Disclaimer
 This software is meant to be a productive contribution to the rapidly growing AI-generated media industry. It will help artists with tasks such as animating a custom character or using the character as a model for clothing etc.
