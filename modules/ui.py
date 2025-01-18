@@ -604,7 +604,7 @@ def create_preview(parent: ctk.CTkToplevel) -> ctk.CTkToplevel:
 
     preview = ctk.CTkToplevel(parent)
     preview.withdraw()
-    preview.title('Always Reset Face Tracking When no Faces, Switching Live Video Stream, or New Faces')
+    preview.title('Always Reset Face Tracking When no Faces, Switching Live Video Stream, or New Faces. Face Index (-1) Auto')
     preview.configure()
     preview.protocol('WM_DELETE_WINDOW', lambda: toggle_preview_cam())
     preview.resizable(width=True, height=True)
