@@ -62,7 +62,7 @@ def create_root(start: Callable[[], None], destroy: Callable[[], None]) -> ctk.C
     global flip_faces_value,fps_label,stickyface_var
     global detect_face_right_value,filter_var
     global pseudo_threshold_var,both_faces_var
-    global face_tracking_value,many_faces_var,pseudo_face_var,rot_range_var
+    global face_tracking_value,many_faces_var,pseudo_face_var,rot_range_var,face_index_var
     global target_face1_value,target_face2_value,target_face3_value,target_face4_value,target_face5_value
     global target_face6_value,target_face7_value,target_face8_value,target_face9_value,target_face10_value
     global pseudo_face_switch, stickiness_dropdown, pseudo_threshold_dropdown, clear_tracking_button
@@ -80,6 +80,7 @@ def create_root(start: Callable[[], None], destroy: Callable[[], None]) -> ctk.C
     root.configure()
     root.protocol('WM_DELETE_WINDOW', lambda: destroy())
 
+    modules.globals.face_index_var = ctk.StringVar(value="0")
     y_start = 0.01
     y_increment = 0.05
 
@@ -680,7 +681,7 @@ def create_preview(parent: ctk.CTkToplevel) -> ctk.CTkToplevel:
         modules.globals.rot_range_dropdown_preview.set(size)
 
     # Create rotation range label
-    face_rot_label = ctk.CTkLabel(switch_frame, text=" | Face Rot Range ->", font=("Arial", 16))
+    face_rot_label = ctk.CTkLabel(switch_frame, text=" | Face Rot Range ", font=("Arial", 16))
     face_rot_label.pack(side='left', padx=5, pady=5)
 
     # Initialize and create rotation range dropdown
@@ -691,6 +692,37 @@ def create_preview(parent: ctk.CTkToplevel) -> ctk.CTkToplevel:
 
     # Store the switch in modules.globals for access from create_preview
     modules.globals.rot_range_dropdown_preview = rot_range_dropdown_preview 
+
+
+    modules.globals.face_index_range = -1  # Initialize to -1
+    modules.globals.face_index_var = ctk.StringVar(value="-1") # Initialize the option menu variable
+
+    # Function to handle face range changes
+    def update_face_index(size):
+        modules.globals.face_index_range= int(size)
+        modules.globals.face_index_dropdown_preview.set(size)
+        modules.globals.flip_faces = False
+        flip_faces_value.set(False)
+        modules.globals.both_faces = False
+        both_faces_var.set(False)
+        if modules.globals.face_tracking:
+            modules.globals.many_faces = False
+            many_faces_var.set(False)  # Update the many faces switch state
+            # clear_face_tracking_data()
+
+
+        # Create face index range label
+    face_rot_index = ctk.CTkLabel(switch_frame, text=" | Face Index ", font=("Arial", 16))
+    face_rot_index.pack(side='left', padx=5, pady=5)
+
+    # Initialize and create rotation range dropdown
+    face_index_dropdown_preview = ctk.CTkOptionMenu(switch_frame, values=["-1","0", "1", "2", "3", "4", "5", "6", "7", "8", "9"],
+                                        variable=modules.globals.face_index_var,
+                                        command=update_face_index)
+    face_index_dropdown_preview.pack(side='left', padx=5, pady=5)
+
+    # Store the switch in modules.globals for access from create_preview
+    modules.globals.face_index_dropdown_preview = face_index_dropdown_preview 
 
     preview_label_cam = ctk.CTkLabel(preview, text=None)
     preview_label_cam.pack(fill='y', expand=True)
@@ -904,7 +936,7 @@ def update_preview(frame_number: int = 0) -> None:
             source_image = cv2.imread(modules.globals.source_path)
             faces = get_many_faces(source_image)
             if faces:
-                # sort faces from left to right then slice max 6
+                # sort faces from left to right then slice max 10
                 source_images = sorted(faces, key=lambda face: face.bbox[0])[:10]
 
         # no face found
@@ -953,8 +985,8 @@ def webcam_preview():
     second_face_id = None
 
     # Set initial size of the preview window
-    PREVIEW_WIDTH = 800
-    PREVIEW_HEIGHT = 480
+    PREVIEW_WIDTH = 1000
+    PREVIEW_HEIGHT = 620
     camera_index = modules.globals.camera_index
     camera = cv2.VideoCapture(camera_index)
     update_camera_resolution()
@@ -975,13 +1007,24 @@ def webcam_preview():
         source_image = cv2.imread(modules.globals.source_path)
         faces = get_many_faces(source_image)
         if faces:
-             # sort faces from left to right then slice max 6
+            # sort faces from left to right then slice max 6
             source_images = sorted(faces, key=lambda face: face.bbox[0])[:10]
     
     if not source_images:
         print('No face found in source image')
         return
     else:
+        # Create the new list of values for the dropdown
+        num_faces = len(source_images)
+        dropdown_values = ["-1"] + [str(i) for i in range(num_faces)] # Changed from "1"
+        
+        # Update the dropdown with the new values
+        modules.globals.face_index_dropdown_preview.configure(values=dropdown_values)
+
+        #set value back to default value
+        modules.globals.face_index_var.set("-1")
+        modules.globals.face_index_range = -1
+
         for frame_processor in frame_processors:
              if hasattr(frame_processor, 'extract_face_embedding'):
                 # Extract embeddings for all source faces and store them
@@ -1107,6 +1150,10 @@ def both_faces(*args):
     modules.globals.many_faces = False
     many_faces_var.set(False)  # Update the many faces switch state
 
+    modules.globals.face_index_range= int(-1)
+    modules.globals.face_index_dropdown_preview.set(-1)
+
+    face_index_range=0
 def many_faces(*args):
     global face_tracking_value
     size = many_faces_var.get()
@@ -1124,6 +1171,9 @@ def many_faces(*args):
 
         modules.globals.detect_face_right = False
         detect_face_right_value.set(False)
+
+        modules.globals.face_index_range= int(-1)
+        modules.globals.face_index_dropdown_preview.set(-1)
 
         # pseudo_face_var.set(False)  # Update the switch state
         # face_tracking()  # Call face_tracking to update UI elements
@@ -1155,6 +1205,9 @@ def face_tracking(*args):
         position_size_dropdown.configure(state="normal")
         old_embedding_size_dropdown.configure(state="normal")
         new_embedding_size_dropdown.configure(state="normal")
+        
+        modules.globals.face_index_range= int(-1)
+        modules.globals.face_index_dropdown_preview.set(-1)
     else:  # If face tracking is disabled
         pseudo_face_switch.configure(state="disabled")
         stickiness_dropdown.configure(state="disabled")
@@ -1166,6 +1219,7 @@ def face_tracking(*args):
         old_embedding_size_dropdown.configure(state="disabled")
         new_embedding_size_dropdown.configure(state="disabled")
         pseudo_face_var.set(False)  # Update the switch state
+
 
     clear_face_tracking_data()
 
@@ -1193,6 +1247,9 @@ def flip_faces(*args):
     modules.globals.many_faces = False
     many_faces_var.set(False)  # Update the many faces switch state
     
+    modules.globals.face_index_range= int(-1)
+    modules.globals.face_index_dropdown_preview.set(-1)
+
     if modules.globals.face_tracking:
         clear_face_tracking_data()
 

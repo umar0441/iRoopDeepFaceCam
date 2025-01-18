@@ -603,105 +603,41 @@ def process_frame(source_face: List[Face], temp_frame: Frame) -> Frame:
     if modules.globals.many_faces: # If we should swap many faces
          if modules.globals.face_tracking: # If we are tracking faces
             for i, target_face in enumerate(target_faces): # Loop through all the faces
-                source_index = _get_source_index(i, source_face, source_face_order) # Get the index of the source face to use
+                if modules.globals.face_index_range != -1:
+                    source_index= modules.globals.face_index_range
+                else: 
+                    source_index = i % len(source_face) # Get the index of the source face to use
                 temp_frame = _process_face_tracking_many(temp_frame, source_face, target_face, source_index, source_face_order )  # Track many faces
          else: # If we are not tracking faces
             for i, target_face in enumerate(target_faces): # Loop through all the faces
-                source_index = _get_source_index(i, source_face, source_face_order) # Get the index of the source face to use
+                if modules.globals.face_index_range != -1:
+                    source_index= modules.globals.face_index_range
+                else: 
+                    source_index = i % len(source_face)  # Get the index of the source face to use
                 temp_frame = _process_face_swap(temp_frame, source_face, target_face, source_index) # Swap the face
     else:
         faces_to_process = 2 if modules.globals.both_faces and len(source_face) > 1 else 1 # If we're swapping two faces, process two faces, otherwise process one
         for i in range(min(faces_to_process, len(target_faces))):
-            source_index = _get_source_index(i, source_face, source_face_order) # Get the index of the source face to use
+            if modules.globals.face_index_range != -1:
+                source_index= modules.globals.face_index_range
+            else: 
+                source_index = _get_source_index(i, source_face, source_face_order) # Get the index of the source face to use
             if modules.globals.face_tracking: # If we're tracking faces
                 if modules.globals.both_faces: # If we're tracking two faces
                    temp_frame = _process_face_tracking_both(
                         temp_frame, source_face, target_faces[i], source_index, source_face_order # Track both faces
                     )
                 else:
+                    if modules.globals.face_index_range != -1:
+                        active_source_index= modules.globals.face_index_range
+
                     temp_frame = _process_face_tracking_single(
                         temp_frame, source_face, target_faces[i], active_source_index # Track one face
                     )
 
             else: # If we're not tracking faces
-                temp_frame = _process_face_swap(temp_frame, source_face, target_faces[i], source_index) # Swap the faces without tracking
-
-    # Apply mouth masks
-    temp_frame = _apply_mouth_masks(temp_frame, target_faces, mouth_masks, face_masks)
-
-    # Draw face boxes and landmarks if enabled
-    if modules.globals.show_target_face_box:
-        # face_analyser = get_face_analyser()
-        # temp_frame = face_analyser.draw_on(temp_frame, target_faces)
-        for face in target_faces:
-            temp_frame = draw_all_landmarks(temp_frame, face) # Draw the face landmarks
-
-    # Rotate back the frame
-    temp_frame = _rotate_frame(temp_frame, -modules.globals.face_rot_range)
-
-    return temp_frame
-
-def process_frame(source_face: List[Face], temp_frame: Frame) -> Frame:
-    """Main function to process a single frame."""
-    global first_face_embedding, second_face_embedding, first_face_position, second_face_position
-    global first_face_id, second_face_id
-    global first_face_lost_count, second_face_lost_count
-
-    # Rotate the frame
-    temp_frame = _rotate_frame(temp_frame, modules.globals.face_rot_range)
-
-    # Detect faces in the frame
-    all_faces = _detect_faces(temp_frame)
-
-    # Handle face tracking reset logic
-    if modules.globals.face_tracking: # If we're using face tracking
-        if modules.globals.detect_face_right_value: # If the "detect right face" button was pressed
-            reset_face_tracking() # Reset the face tracking
-            modules.globals.detect_face_right_value = False # Set the button to false
-        if modules.globals.flip_faces_value: # If the "flip faces" button was pressed
-            reset_face_tracking() # Reset the face tracking
-            modules.globals.flip_faces_value = False # Set the button to false
-    elif modules.globals.face_tracking_value: # If the "turn on face tracking" button was pressed
-        reset_face_tracking() # Reset the face tracking
-        modules.globals.face_tracking_value = False # Set the button to false
-
-    # Select which faces to process
-    target_faces = _select_target_faces(all_faces)
-
-    # Limit number of faces
-    target_faces = _limit_target_faces(target_faces)
-
-    # Pre-compute mouth masks if needed
-    mouth_masks, face_masks = _compute_mouth_masks(target_faces, temp_frame)
-
-    # Determine source face order
-    active_source_index = 1 if modules.globals.flip_faces else 0 # If we should flip the source faces
-    source_face_order = [1, 0] if modules.globals.flip_faces else [0, 1] # If we should flip the source faces
-
-    if modules.globals.many_faces: # If we should swap many faces
-         if modules.globals.face_tracking: # If we are tracking faces
-            for i, target_face in enumerate(target_faces): # Loop through all the faces
-                source_index = i % len(source_face) # Get the index of the source face to use
-                temp_frame = _process_face_tracking_many(temp_frame, source_face, target_face, source_index, source_face_order )  # Track many faces
-         else: # If we are not tracking faces
-            for i, target_face in enumerate(target_faces): # Loop through all the faces
-                source_index = i % len(source_face)  # Get the index of the source face to use
-                temp_frame = _process_face_swap(temp_frame, source_face, target_face, source_index) # Swap the face
-    else:
-        faces_to_process = 2 if modules.globals.both_faces and len(source_face) > 1 else 1 # If we're swapping two faces, process two faces, otherwise process one
-        for i in range(min(faces_to_process, len(target_faces))):
-            source_index = _get_source_index(i, source_face, source_face_order) # Get the index of the source face to use
-            if modules.globals.face_tracking: # If we're tracking faces
-                if modules.globals.both_faces: # If we're tracking two faces
-                   temp_frame = _process_face_tracking_both(
-                        temp_frame, source_face, target_faces[i], source_index, source_face_order # Track both faces
-                    )
-                else:
-                    temp_frame = _process_face_tracking_single(
-                        temp_frame, source_face, target_faces[i], active_source_index # Track one face
-                    )
-
-            else: # If we're not tracking faces
+                if modules.globals.face_index_range != -1:
+                    source_index= modules.globals.face_index_range
                 temp_frame = _process_face_swap(temp_frame, source_face, target_faces[i], source_index) # Swap the faces without tracking
 
     # Apply mouth masks

@@ -74,9 +74,11 @@ new_embedding_weight  = 0.10
 
 mouth_mask_switch_preview=None
 rot_range_dropdown_preview=None
+face_index_dropdown_preview=None
 flipX_switch_preview=None
 flipY_switch_preview=None
 face_rot_range=0
+face_index_range=0
 isRotatedClockwise=False
 isRotatedCounterClockwise=False
 isRotated180=False
