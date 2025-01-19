@@ -9,7 +9,7 @@ iRoopDeepFaceCam features are groundbreaking that [Deep-Live-Cam](https://github
 
 What sets iRoopDeepFaceCam apart is its ability to work with one or ten source faces and target one or 10 faces in real-time or in any video or image. Plus, the unique 'Mouth Mask' feature seamlessly blends the original mouth with the source face, allowing you to interact with objects and make your face swaps look incredibly realistic.
 
-But that's not all! iRoopDeepFaceCam also offers face tracking for two faces, perfect for keeping the magic alive when two people are on screen or when the scene changes. You can face swap two people simultaneously, watch videos, or live stream with this fantastic feature. With all these powerful tools, iRoopDeepFaceCam opens up endless possibilities for creativity and fun. Dive in and start creating your own face swap adventures today!
+But that's not all! iRoopDeepFaceCam also offers face tracking for one to ten faces, perfect for keeping the magic alive when more people are on screen or when the scene changes. You can face swap one to ten people simultaneously, watch videos, or live stream with this fantastic feature. With all these powerful tools, iRoopDeepFaceCam opens up endless possibilities for creativity and fun. Dive in and start creating your own face swap adventures today!
 
 ### Click Image to Watch Quick Video Demo [iRoopDeepFaceCam](https://youtu.be/bhFx6fZab1E)
 [![iRoopDeepFaceCam](https://i.ytimg.com/vi/bhFx6fZab1E/maxresdefault.jpg)](https://youtu.be/bhFx6fZab1E)
@@ -21,6 +21,8 @@ But that's not all! iRoopDeepFaceCam also offers face tracking for two faces, pe
 To kick off the Live webcam feature in iRoopDeepFaceCam, just hit the 'Live' button. It takes about 30 seconds for the preview window to pop up. You can adjust the resolution of the live webcam to suit your needs, but keep in mind that higher resolutions may slow down the face swap process. Feel free to switch resolutions based on your computer's power and performance.
 
 No worries about the preview window size—you can resize it independently of the webcam resolution. Want to go full screen? You can make the preview window as large as you like without affecting the face swap rendering. The rendering will stay smooth, no matter the size of your preview window. Enjoy seamless face swap fun with complete control over your setup!  
+
+Webcam resolution can also control the quality of filters, like White Ink, Black Ink and Pencil. Low resolution will give you thicker lines, and higer resolution will give you thinner lines.
 
 ## One to Ten faces replaced on webcam
 
