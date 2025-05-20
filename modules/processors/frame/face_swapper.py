@@ -771,7 +771,7 @@ def create_face_mask(face: Face, frame: Frame) -> np.ndarray:
         right_eyebrow_top = landmarks[104].astype(np.float32) # Get the top of the right eyebrow
         face_height = np.abs(np.mean([left_eyebrow_top[1], right_eyebrow_top[1]]) -
                             np.max(face_outline_landmarks[:, 1])) # Calculate the height of the face
-        forehead_padding = int(face_height * 0.5) # Calculate how much padding we should add for the forehead
+        forehead_padding = int(face_height * modules.globals.face_forehead_var) # Calculate how much padding we should add for the forehead
         forehead_points = [] # Create a list to store the forehead points
         for point in face_outline_landmarks: # Loop through all the points of the face outline
             x, y = point
