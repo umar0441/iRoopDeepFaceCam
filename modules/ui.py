@@ -26,7 +26,7 @@ ROOT_WIDTH = 600
 PREVIEW = None
 PREVIEW_IMAGE = None
 PREVIEW_MAX_HEIGHT = 700
-PREVIEW_MAX_WIDTH  = 1200
+PREVIEW_MAX_WIDTH  = 1300
 PREVIEW_DEFAULT_WIDTH  = 640
 PREVIEW_DEFAULT_HEIGHT = 360
 BLUR_SIZE=1
@@ -683,13 +683,13 @@ def create_preview(parent: ctk.CTkToplevel) -> ctk.CTkToplevel:
         modules.globals.rot_range_dropdown_preview.set(size)
 
     # Create rotation range label
-    face_rot_label = ctk.CTkLabel(switch_frame, text=" | Face Rot Range ", font=("Arial", 16))
+    face_rot_label = ctk.CTkLabel(switch_frame, text=" | Rot Range ", font=("Arial", 16))
     face_rot_label.pack(side='left', padx=5, pady=5)
 
     # Initialize and create rotation range dropdown
     rot_range_dropdown_preview = ctk.CTkOptionMenu(switch_frame, values=["0", "90", "180", "-90"],
                                                    variable=modules.globals.rot_range_var,
-                                                   command=update_rotation_range)
+                                                   command=update_rotation_range,width=10)
     rot_range_dropdown_preview.pack(side='left', padx=5, pady=5)
 
     # Store the switch in modules.globals for access from create_preview
@@ -714,11 +714,29 @@ def create_preview(parent: ctk.CTkToplevel) -> ctk.CTkToplevel:
     # Initialize and create rotation range dropdown
     face_index_dropdown_preview = ctk.CTkOptionMenu(switch_frame, values=["-1","0", "1", "2", "3", "4", "5", "6", "7", "8", "9"],
                                                     variable=modules.globals.face_index_var,
-                                                    command=update_face_index)
+                                                    command=update_face_index,width=10)
     face_index_dropdown_preview.pack(side='left', padx=5, pady=5)
 
     # Store the switch in modules.globals for access from create_preview
     modules.globals.face_index_dropdown_preview = face_index_dropdown_preview 
+
+
+
+    def update_forehead_index(size):
+        new_float_value = float(size)
+        modules.globals.face_forehead_var = new_float_value
+
+    face_forehead_index = ctk.CTkLabel(switch_frame, text=" | Forehead ", font=("Arial", 16))
+    face_forehead_index.pack(side='left', padx=5, pady=5)
+
+    # Initialize and create rotation range dropdown
+    face_forehead_size_var = ctk.StringVar(value="0.1")
+    face_forehead_index_dropdown_preview = ctk.CTkOptionMenu(switch_frame, values=["0.1","0.2", "0.3", "0.4", "0.5"],
+                                                    variable=face_forehead_size_var,
+                                                    command=update_forehead_index,width=10)
+    face_forehead_index_dropdown_preview.pack(side='left', padx=5, pady=5)
+
+
 
     preview_label_cam = ctk.CTkLabel(preview, text=None)
     preview_label_cam.pack(fill='y', expand=True)
@@ -998,7 +1016,7 @@ def webcam_preview():
     second_face_id = None
 
     # Set initial size of the preview window
-    PREVIEW_WIDTH = 1000
+    PREVIEW_WIDTH = 1030
     PREVIEW_HEIGHT = 620
     camera_index = modules.globals.camera_index
     camera = cv2.VideoCapture(camera_index)
